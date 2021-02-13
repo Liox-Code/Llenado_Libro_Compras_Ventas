@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-family: PT_Sans;
+}
+@font-face{
+  src:url(fonts/PT_Sans-Web-Regular.ttf);
+  font-family: PT_Sans;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  overflow: hidden;
+  background: #F5F5F5;
+  width: 100%;
+}
+nav .botonNavImg {
+  float: left;
+  display: block;
+  text-align: center;
+  width: 10%;
+}
+nav .botonNavImg .imgLogo{
+  width: 70px;
+}
+nav .botonNav {
+  color: #00afe9;
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 20%;
+  padding: 16px 10px;
+}
+header nav .botonNav:hover{
+  color: #F5F5F5;
+  background-color: #00afe9;
+}
+

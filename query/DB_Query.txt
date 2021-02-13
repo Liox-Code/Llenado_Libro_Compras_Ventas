@@ -1,0 +1,107 @@
+<?php
+	define('USER_NAME','root');
+	define('PASS','');
+	define('HOST','localhost');
+	define('DB_NAME','llenado_libro_compras_ventas');
+?>
+CREATE TABLE rol(
+    cod_rol INT NOT NULL,
+    nombre_rol VARCHAR(30),
+    PRIMARY KEY (cod_rol)
+);
+CREATE TABLE empresa(
+    nit_empresa BIGINT NOT NULL,
+    nombre_empresa VARCHAR(20),
+    PRIMARY KEY (nit_empresa)
+);
+CREATE TABLE usuario(
+    ci_usuario BIGINT NOT NULL,
+    nombre VARCHAR(20) NOT NULL,
+    apellido VARCHAR(20) NOT NULL,
+    nombre_usuario VARCHAR(20) NOT NULL UNIQUE,
+    clave VARCHAR(40) NOT NULL,
+    cod_rol INT NOT NULL,
+    estado BOOLEAN NOT NULL,
+    PRIMARY KEY (ci_usuario)
+);
+CREATE TABLE libro_compras(
+    cod_libro_compras BIGINT NOT NULL AUTO_INCREMENT,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    nombre VARCHAR(50),
+    importe_total_compra DOUBLE(10,2),
+    importe_no_sujeto_credito_fiscal DOUBLE(10,2),
+    subtotal DOUBLE(10,2),
+    descuentos_bonificaciones_y_rebajas_sujetas_IVA DOUBLE(10,2),
+    importe_base_credito_fiscal DOUBLE(10,2),
+    credito_fiscal DOUBLE(10,2),
+    nit_empresa BIGINT,
+    PRIMARY KEY (cod_libro_compras)
+);
+CREATE TABLE libro_ventas(
+    cod_libro_ventas BIGINT NOT NULL AUTO_INCREMENT,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    nombre VARCHAR(50),
+    importe_total_venta DOUBLE(10,2),
+    importe_ICE_IEHD_IPJ_otros_no_sujetos_IVA DOUBLE(10,2),
+    exportaciones_y_operaciones_exentas DOUBLE(10,2),
+    ventas_gravadas_tasa_cero DOUBLE(10,2),
+    subtotal DOUBLE(10,2),
+    descuentos_bonificaciones_y_rebajas_sujetas_IVA DOUBLE(10,2),
+    importe_base_debito_fiscal DOUBLE(10,2),
+    debito_fiscal DOUBLE(10,2),
+    nit_empresa BIGINT,
+    PRIMARY KEY (cod_libro_ventas)
+);
+CREATE TABLE registra_empresa(
+    ci_administrador BIGINT,
+    nit_empresa BIGINT
+);
+CREATE TABLE trabaja_empresa(
+    ci_administrador BIGINT NOT NULL,
+    ci_empleado_empresa_cliente BIGINT NOT NULL,
+    nit_empresa BIGINT,
+    cod_libro_compras BIGINT,
+    cod_libro_ventas BIGINT
+);
+CREATE TABLE facturas_compras(
+    fecha_factura_o_DUI DATE NOT NULL,
+    nit_proveedor BIGINT NOT NULL,
+    nombre_o_razon_social VARCHAR(150) NOT NULL,
+	num_factura BIGINT NOT NULL,
+    num_DUI VARCHAR(16) NOT NULL,
+    num_autorisacion BIGINT NOT NULL,
+    importe_total_compra DOUBLE(10,2),
+    importe_no_sujeto_credito_fiscal DOUBLE(10,2),
+    subtotal DOUBLE(10,2),
+    descuentos_bonificaciones_y_rebajas_sujetas_IVA DOUBLE(10,2),
+    importe_base_credito_fiscal DOUBLE(10,2),
+    credito_fiscal DOUBLE(10,2),
+    codigo_control VARCHAR(17),
+    tipo_compra INT(1),
+    ci_usuario BIGINT NOT NULL,
+    cod_libro_compras BIGINT NOT NULL,
+    PRIMARY KEY (num_factura,num_autorisacion,nit_proveedor)
+);
+CREATE TABLE facturas_ventas(
+    fecha_factura DATE NOT NULL,
+	num_factura BIGINT NOT NULL,
+    num_autorisacion BIGINT NOT NULL,
+    estado VARCHAR(1),
+    nit_ci_cliente BIGINT NOT NULL,
+    nombre_o_razon_social VARCHAR(150) NOT NULL,
+    importe_total_venta DOUBLE(10,2),
+    importe_ICE_IEHD_IPJ_otros_no_sujetos_IVA DOUBLE(10,2),
+    exportaciones_y_operaciones_exentas DOUBLE(10,2),
+    ventas_gravadas_tasa_cero DOUBLE(10,2),
+    subtotal DOUBLE(10,2),
+    descuentos_bonificaciones_y_rebajas_sujetas_IVA DOUBLE(10,2),
+    importe_base_debito_fiscal DOUBLE(10,2),
+    debito_fiscal DOUBLE(10,2),
+    codigo_control VARCHAR(17),
+    ci_usuario BIGINT NOT NULL,
+    cod_libro_ventas BIGINT NOT NULL,
+    PRIMARY KEY (num_factura,num_autorisacion,nit_ci_cliente)
+);
+
+INSERT INTO `rol`(`cod_rol`, `nombre_rol`) VALUES (1,'administrador');
+INSERT INTO `rol`(`cod_rol`, `nombre_rol`) VALUES (2,'empleado_empresa_cliente');

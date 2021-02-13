@@ -1,0 +1,114 @@
+@font-face{
+  src:url(fonts/PT_Sans-Web-Regular.ttf);
+  font-family: PT_Sans;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: PT_Sans;
+  background-image: url('../img/paisaje_Azul_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 800px;
+}
+nav{
+  overflow: hidden;
+  background: #F5F5F5;
+  width: 100%;
+}
+nav .botonNav, .dropdownBtn {
+  color: #00afe9;
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 20%;
+  padding: 16px 10px;
+}
+.dropdownBtn{
+  width: 100%;
+}
+header nav .botonNav:hover{
+  color: #F5F5F5;
+  background-color: #00afe9;
+}
+
+.dropdown_right,.btn_right  {
+  float: right;
+  overflow: hidden;
+}
+
+.btn_right{
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #00afe9;
+  padding: 16px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  width: 20%;
+  text-align: center;
+  display: block;
+}
+
+.dropdown_right .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #00afe9;
+    padding: 16px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 200px;
+}
+
+.navbar a:hover, .dropdown_right:hover .dropbtn,.btn_right:hover {
+  color: rgb(255, 255, 255);
+  background: #00afe9;
+  text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #00afe9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #00afe9;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.dropdown_right:hover .dropdown-content {
+  color: rgb(255, 255, 255);
+  display: block;
+}
+nav .botonNavImg {
+  float: left;
+  display: block;
+  text-align: center;
+  width: 10%;
+}
+.imgLogo{
+  width: 70px;
+}
+a{
+  text-decoration: none;
+}

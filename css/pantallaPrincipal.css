@@ -1,0 +1,42 @@
+.contenedor {
+  position: relative;
+  width: 100%;
+}
+
+.imagen {
+  opacity: 1;
+  width: 100%;
+  transition: .5s ease;
+}
+
+.formaMedio {
+  transition: .5s ease;
+  opacity: 0.9;
+  position: absolute;
+  top:  10%;
+  left: 10%;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+}
+
+.principalTitulo {
+  font-weight: bold;
+  color: #438496;
+  font-size: 20px;
+  padding: 40px 32px 0 32px;
+  text-align: center;
+}
+
+.principalSubTitulo {
+  font-weight: bold;
+  color: #438496;
+  font-size: 18px;
+  padding: 0px 40px;
+}
+
+.principalDescripcion {
+  color: #438496;
+  font-size: 16px;
+  padding: 0px 40px;
+}

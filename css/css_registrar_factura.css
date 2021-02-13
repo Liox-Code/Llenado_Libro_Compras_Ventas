@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    font-family: PT_Sans;
+}
+@font-face{
+    src:url(fonts/PT_Sans-Web-Regular.ttf);
+    font-family: PT_Sans;
+}
+.ListadoFacturas input[type=text],.ListadoFacturas input[type=date],.ListadoFacturas input[type=number]{
+    width: 160px;
+    margin: 2px auto;
+    padding: 4px 5px 4px 5px;
+    display: block;
+    font-size: 16px;
+    border-style: solid;
+    border-radius: 10px 10px 10px 10px;
+    border-color: #00afe9;
+    background-color: #FFFFFF;
+    color: #00afe9;
+}
+.ListadoFacturas input:focus{
+    outline: none;
+    border-color: #00afe9;
+    background-color: #00afe9;
+    color: #FFFFFF;
+}
+::placeholder {
+    color: #00afe9;
+    opacity: 1;
+}
+:focus::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+.formaModificar input[type=submit]{
+background-color: Transparent;
+width: 100%;
+color: #FFFFFF;
+padding: 8px 0px;
+background-color: #00afe9;
+font-size: 20px;
+border: none;
+}
+.formaModificar input[type=submit]:hover{
+background-color: #ffffff;
+color: #00afe9;
+border: 1px solid #00afe9;
+}
+.formaModificar .botones{
+width: 100%;
+margin: 16px 0;
+}
+.formaModificar textarea{
+width: 100%;
+margin: 2px 0px;
+padding: 8px 0px;
+height: 100px;
+}
+.formaModificar h2{
+color: #00afe9;
+margin: 2px 0;
+}
+.formaModificar label{
+color: #00afe9;
+}
+.btnModificar{
+width: 100%;
+padding: 10px 16px;
+}
+.soloLeer{
+background-color: #f9f9f9;
+border-color: #f9f9f9;
+}

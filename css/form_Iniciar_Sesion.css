@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+.contenedorFormUsuarioIniciarSesion{
+  position: absolute;
+  left: 36%;
+  top: 26%;
+  height: 270px;
+}
+.contenedorFormUsuarioRegistrar{
+  position: absolute;
+  left: 36%;
+  top: 14%;
+  height: 620px;
+}
+.formUsuario{
+  background-color: #fff;
+  opacity: 0.9;
+  color: #00afe9;
+  height: 100%;
+  width:400px;
+  padding: 16px 30px;
+  border-radius: 15px;
+}
+.formUsuario input[type=text],.formUsuario input[type=password],.formUsuario input[type=number]{
+  width: 98%;
+  margin: 2px auto;
+  padding: 8px 0px 8px 10px;
+  display: block;
+  font-size: 18px;
+  border: none;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  background-color: #4C4C4C;
+  color: #FFFFFF;
+}
+  .formUsuario input:focus{
+    background-color: #FFFFFF;
+    color: #DC143C;
+  }
+  ::placeholder {
+    color: #00afe9;
+    opacity: 1;
+  }
+  :focus::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  .formUsuario label{
+    font-size: 20px;
+    width: 100%;
+    padding: 8px 0 0 0;
+    display: inline-block;
+    color: #00afe9;
+    border: none;
+  }
+  .botones{
+    margin: 10px 0 0 0;
+    padding: 10px o;
+    height: 50px;
+  }
+  .btnRegistrar, .btnIniSesion{
+    font-size: 20px;
+    float: left;
+    width: 48%;
+    padding: 10px 32px;
+    margin: 0 1%;
+    background-color: #00afe9;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .btnRegistrar:hover, .btnIniSesion:hover{
+    background-color: #ffffff;
+    color: #00afe9;
+    border: 1px solid #00afe9;
+  }
+  

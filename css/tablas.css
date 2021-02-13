@@ -1,0 +1,131 @@
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #00afe9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007096;
+}
+
+.ListadoFacturas{
+  border-collapse: collapse;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.ListadoFacturas td{
+  font-size: 16px;
+  padding: 6px 10px;
+  text-align: center;
+}
+.ListadoFacturas tr:nth-child(even){
+  background-color: #FFFFFF;
+}
+
+.ListadoFacturas th {
+    background-color: #00afe9;
+    color: white;
+}
+
+.ListadoFacturas th .btn_Ordenar, .ListadoFacturas th a{
+  color: #FFFFFF;
+  display:block;
+  font-size: 16px;
+  padding: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  width:100%;
+}
+
+.ListadoFacturas th .btn_Ordenar:hover{
+  background-color: #007096;
+}
+
+.btnEnviar{
+  background-color: #f9f9f9;
+  color: #00afe9;
+  font-size: 16px;
+  padding: 16px 80px;
+  border: none;
+  display: block;
+}
+.btnEnviar:hover{
+  background-color: #00afe9;
+  color: #ffffff;
+}
+.imgABM{
+  width: 30px;
+}
+
+.ListadoFacturas .facturaExpirada{
+  background-color: RED;
+}
+
+.filtro{
+  padding: 8px 0px 8px 10px;
+  font-size: 18px;
+  border: none;
+  background-color: #4C4C4C;
+  color: #FFFFFF;
+  font-family: PT_Sans;
+}
+.formUsuario input:focus{
+  background-color: #FFFFFF;
+  color: #DC143C;
+}
+::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+:focus::placeholder {
+  color: #00afe9;
+  opacity: 1;
+}
+.txttEmailTodosEmpleados
+{
+  background-color: #4C4C4C;
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  display: block;
+}
+
+.buscador_facturas{
+  width: 160px;
+  padding: 4px 5px 4px 5px;
+  display: block;
+  font-size: 16px;
+  border-style: solid;
+  border-radius: 10px 10px 10px 10px;
+  border-color: #00afe9;
+  background-color: #FFFFFF;
+  color: #00afe9;
+}
+
+.buscador_facturas:focus{
+  outline: none;
+  border-color: #00afe9;
+  background-color: #00afe9;
+  color: #FFFFFF;
+}
+
+select {
+  border-color: #f9f9f9;
+  border-width: 2px;
+  font-size: 12px;
+  padding: 5px;
+  width: 200px;
+  background-color: #b5e6f7;
+  color: #FFFFFF;
+}
